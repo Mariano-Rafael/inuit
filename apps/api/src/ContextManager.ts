@@ -7,7 +7,7 @@ export class ContextManager {
         this.state = initialState;
     }
 
-    // navegação e digressão
+    // navigation and digression
 
     public getCurrentNodeId(): string {
         return this.state.currentNodeId;
@@ -34,7 +34,7 @@ export class ContextManager {
         return this.state.callStack.length > 0;
     }
 
-    // memória de contexto
+    // context memory
 
     public setVariable(key: string, value: any): void {
         this.state.context[key] = value;
@@ -44,7 +44,7 @@ export class ContextManager {
         return this.state.context[key];
     }
 
-    // controle de tentativas
+    // retry control
 
     public incrementRetries(): number {
         this.state.retries += 1;
@@ -59,7 +59,7 @@ export class ContextManager {
         this.state.retries = 0;
     }
 
-    // exportação do estado da sessão
+    // export of session state
 
     public exportState(): SessionState {
         this.state.lastInteractionAt = Date.now();
