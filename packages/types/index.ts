@@ -7,7 +7,9 @@ export interface FlowNode {
 
 
 export interface EdgeCondition {
-    type: 'always' | 'equals' | 'notEquals' | 'greaterThan' | 'lessThan';
+    type: 'always' | 'equals' | 'contains' | 'regex' | 'expression' | 'intent';
+    value?: string;
+    variable?: string;
 }
 
 
